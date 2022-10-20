@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'VP Regular';
+    src: url('./VisueltPro-Regular.ttf') format('ttf'),
+        url('./VisueltPro-Regular.woff') format('woff'),
+        url('./VisueltPro-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'VP Medium';
+    src: url('./VisueltPro-Medium.ttf') format('ttf'),
+        url('./VisueltPro-Medium.woff') format('woff'),
+        url('./VisueltPro-Medium.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 600;
+}

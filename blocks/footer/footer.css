@@ -1,0 +1,152 @@
+.footer {
+  margin-top: 100px;
+  padding-top: 45px;
+  min-height: 490px;
+  box-sizing: border-box;
+  background-color: #26699C;
+  color: #ffffff;
+}
+
+.footer__wrapper {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer__disclaimer {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 41px;
+  padding-bottom: 32px;
+}
+
+.footer__line {
+  opacity: 0.8;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.footer__contacts {
+  display: flex;
+  align-items: center;
+}
+
+.footer__contacts-text {
+  font-weight: 500;
+  font-size: 46px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-right: 35px;
+}
+
+.footer__contacts img {
+  width: 32px;
+  height: auto;
+  padding-right: 15px;
+  margin-bottom: -2px;
+}
+
+.footer__address {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  padding-top: 35px;
+  padding-bottom: 66px;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__bottom-form input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white; 
+  width: 200px;
+}
+
+.footer__bottom-form input::placeholder {
+  font-family: 'VP Regular';
+  font-size: 20px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__bottom-form button {
+  background: transparent;
+  min-width: 100px;
+  width: 100px;
+  height: 48px;
+  cursor: pointer;
+  text-align: right;
+  border: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.footer__bottom-copyright {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 60px;
+  }
+
+  .footer__wrapper {
+    width: calc(100vw - 30px);
+    margin: 0 auto;
+  }
+
+  .footer__disclaimer {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .footer__contacts {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer__contacts-text {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 32px;
+  }
+  
+  .footer__address {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+  }
+
+  .footer__bottom {
+      flex-direction: column;
+      flex-direction: column-reverse;
+      padding-top: 30px;
+      padding-bottom: 60px;
+  }
+
+  .footer__bottom-form input {
+    padding-left: 15px;
+  }
+
+  .footer__bottom-copyright {
+      padding-top: 70px;
+  }
+}
