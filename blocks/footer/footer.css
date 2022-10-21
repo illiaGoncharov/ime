@@ -31,6 +31,12 @@
   align-items: center;
 }
 
+.footer__contacts a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
 .footer__contacts-text {
   font-weight: 500;
   font-size: 46px;
@@ -61,12 +67,17 @@
   justify-content: space-between;
 }
 
+.footer__bottom-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .footer__bottom-form input {
   background-color: transparent;
   border: none;
   outline: none;
   color: white; 
-  width: 200px;
 }
 
 .footer__bottom-form input::placeholder {
@@ -81,7 +92,6 @@
 .footer__bottom-form button {
   background: transparent;
   min-width: 100px;
-  width: 100px;
   height: 48px;
   cursor: pointer;
   text-align: right;
@@ -140,10 +150,6 @@
       flex-direction: column-reverse;
       padding-top: 30px;
       padding-bottom: 60px;
-  }
-
-  .footer__bottom-form input {
-    padding-left: 15px;
   }
 
   .footer__bottom-copyright {

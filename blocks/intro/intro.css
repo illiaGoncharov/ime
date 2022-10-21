@@ -46,14 +46,6 @@
     top: 60px;
     left: 0;
 }
-/* @media screen and (max-width: 768px) {
-    .intro__title {
-        max-width: 256px;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 43px;
-    }
-} */
 
 .intro__button{
     background-color: transparent;
@@ -79,9 +71,13 @@
 
     .intro__title {
         font-size: 20px;
-        position: relative;
+        position: absolute;
+        top: initial;
+        bottom: 150px;
         text-align: center;
         padding-top: 500px;
+        width: calc(100vw - 30px);
+        left: 15px;
     }
 
     .intro__button{
