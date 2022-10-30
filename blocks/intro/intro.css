@@ -6,17 +6,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* @media screen and (max-width: 768px){
-    .intro::before {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        transform: matrix(-1, 0, 0, 1, 0, 0);
-    }
-    .intro {
-        padding-bottom: 60px;
-    }
-}    */
 
 .intro__wrapper {
     max-width: 1240px;

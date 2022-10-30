@@ -1,7 +1,138 @@
 .team {
-  background: linear-gradient(to bottom, #E0F0FF 50%, #001337 50%);
-  margin: 0;
-  padding: 0;
+  padding-top: 80px;
+  background: #fff;
+  min-width: 320px;
   width: 100%;
-  position: relative;
+}
+
+.team__wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.team__title {
+  padding-bottom: 40px;
+  font-weight: 500;
+  font-size: 60px;
+  text-align: left;
+  color: #020202;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.team__text {
+  max-width: 850px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #020202;
+  padding-bottom: 50px;
+}
+
+.team__photo {
+  max-width: 1030px;
+  width: 100%;
+  min-width: 320px;
+  max-height: 550px;
+}
+
+.team__doctors {
+  padding-top: 80px;
+  margin-top: -60px;
+  padding-bottom: 58px;
+  background: rgba(93, 165, 211, 0.15);
+}
+
+.team__sub-header {
+  max-width: 1240px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 58px;
+  padding-bottom: 40px;
+}
+
+.team__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team__list-item {
+  background: #fff;
+  max-width: 1240px;
+  margin: 0 auto;
+  border-radius: 10px;
+  min-height: 300px;
+  padding: 50px 60px 50px 60px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 52px;
+}
+
+.team__list-item_image {
+  min-width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team__list-item_header {
+  font-family: 'VP Medium';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  padding-bottom: 4px;
+}
+
+.team__list-item_sub-header {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: rgba(38, 105, 156, 0.45);
+  max-width: 450px;
+  padding-bottom: 20px;
+}
+
+.team__list-item_text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: rgba(32, 32, 32, 0.95);
+}
+
+@media screen and (max-width: 768px) {
+  .team {
+    padding-top: 40px;
+  }
+  .team__title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 51px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+  }
+  .team__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: calc(100vw - 30px);
+    padding-left: 15px;
+  }
+  .team__sub-header {
+    font-size: 25px;
+    line-height: 32px;
+    padding-left: 15px;
+    padding-bottom: 32px;
+  }
+  .team__list-item {
+    flex-direction: column;
+    padding: 25px 15px 50px 15px;
+  }
+
+  .team__list-item_image {
+    height: calc(100vw - 30px);
+    width: calc(100vw - 30px);
+  }
 }

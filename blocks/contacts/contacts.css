@@ -1,0 +1,117 @@
+.contacts {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.contacts__title {
+    font-weight: 400;
+    font-size: 60px;
+    padding-top: 80px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: rgba(32, 32, 32, 0.95);
+    padding-bottom: 32px;
+}
+
+.contacts-list {
+    max-width: 750px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.contacts-list-item {
+    display: flex;
+    text-align: left;
+    flex-basis: 50%;
+    gap: 17px;
+}
+
+.contacts-list-item > p:nth-child(1) {
+    flex-basis: 50%;
+    font-family: 'VP Medium';
+}
+
+.contacts-list-item > p:nth-child(2) {
+    max-width: 45%;
+}
+
+.contacts-list-item p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    color: rgba(32, 32, 32, 0.95);
+}
+
+.contacts-list-item a {
+    font-family: 'VP Medium';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    color: #26699C;
+    text-decoration: none;
+}
+
+.contacts-list-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__modules {
+    padding-top: 50px;
+    list-style: none;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contacts__modules-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contacts__modules-item p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    color: #26699C;
+}
+
+.contacts__modules-item img {
+    max-width: 20px;
+    height: 19px;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+.contacts__iframe {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 550px;
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        width: calc(100vw - 30px);
+    }
+
+    .contacts-list-item {
+        flex-direction: column;
+    }
+
+    .contacts-list-item > *:nth-child(2) {
+        padding-left: 15px;
+    }
+
+    .contacts-list-item > p:nth-child(2) {
+        max-width: 100%;
+    }
+
+    .contacts__modules-item > p:nth-child(1) {
+        max-width: 90%;
+    }
+}
