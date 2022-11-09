@@ -110,6 +110,10 @@
     gap: 40px;
 }
 
+.small-cards__item {
+    max-width: 372px;
+}
+
 .small-cards__header {
     font-weight: 400;
     font-size: 24px;
