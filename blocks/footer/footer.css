@@ -71,6 +71,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: calc(100vw - 30px);
+  overflow: hidden;
 }
 
 .footer__bottom-form input {
