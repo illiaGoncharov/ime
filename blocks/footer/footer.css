@@ -80,6 +80,7 @@
   border: none;
   outline: none;
   color: white; 
+  max-width: 150px;
 }
 
 .footer__bottom-form input::placeholder {
