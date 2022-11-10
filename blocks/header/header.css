@@ -4,6 +4,11 @@
     height: 68px;
     background: #fff;
 }
+
+.header__nav_type_mobile {
+    display: none;
+}
+
 @media screen and (min-width: 1240px) {
     .header {
         position: relative;
@@ -81,4 +86,19 @@
         right: 15px;
         top: 25px
     }
+    .header__nav__wrapper {
+        justify-content: flex-end;
+        padding-right: 65px;
+        z-index: 99999;
+    }
+    .header__nav_type_mobile {
+        display: flex;
+        align-items: center;
+        padding-top: 8px;
+    }
+
+    .header__nav-item a:nth-child(3) {
+        padding-left: 10px;
+    }
 }
+
