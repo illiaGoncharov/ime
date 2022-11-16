@@ -8,7 +8,7 @@
     align-items: center;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.5s, opacity 0.5s linear;
+    transition: visibility 0.2s, opacity 0.2s linear;
     z-index: 999;
 }
 
@@ -31,11 +31,10 @@
 
 .popup__container {
     position: absolute;
-    
     width: 500px;
     left: calc((100vw - 500px) / 2);
     max-width: calc(100vw - 30px);
-    padding-top: 80px;
+    padding-top: 50px;
     box-sizing: border-box;
 }
 
