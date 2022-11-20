@@ -61,6 +61,8 @@
     background-position: center;
     background-size: cover;
     cursor: pointer;
+    -webkit-appearance: none;
+
 }
 
 
@@ -83,6 +85,7 @@
 .form__input {
     margin-top: 10px;
     width: 100%;
+    max-width: calc(100% - 30px);
     background: rgba(231, 242, 248, 0.25);
     opacity: 0.9;
     border: none;
@@ -117,6 +120,16 @@
     color: #9D9D9D;
 }
 
+.form__disclaimer-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__disclaimer-link:hover {
+    opacity: .7;
+}
+
+
 .form__disclaimer {
     font-weight: 400;
     font-size: 12px;
@@ -131,5 +144,10 @@
     .popup__container {
         padding-top: 100px;
         left: 15px;
+    }
+
+    .popup__header h4 {
+        font-size: 22px;
+        font-weight: 300;
     }
 }

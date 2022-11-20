@@ -64,7 +64,7 @@
 .contacts__modules {
     padding-top: 50px;
     list-style: none;
-    max-width: 750px;
+    max-width: 850px;
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -76,6 +76,7 @@
     width: 100%;
     text-decoration: none;
     cursor: pointer;
+    height: 45px;
 }
 
 .contacts__modules-item p {
@@ -94,30 +95,32 @@
 }
 
 .contacts__modules-dropdown {
+    padding-left: 15px;
+    max-width: 750px;
     visibility: visible;
     font-weight: 400;
     font-size: 20px;
     color: #344055;
-    max-height: 1000px;
-    box-sizing: border-box;
-    padding-top: 16px;
     opacity: 1;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 .contacts__modules-dropdown.hidden {
+    height: 0;
+    box-sizing: border-box;
     max-height: 0px;
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
+    -webkit-transition: all .05s ease;
+    -moz-transition: all .05s ease;
+    -ms-transition: all .05s ease;
+    -o-transition: all .05s ease;
+    transition: all .05s ease;
 }
 
 .contacts__iframe {
@@ -125,6 +128,7 @@
     max-width: 1050px;
     min-height: 550px;
     padding-top: 50px;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -146,5 +150,8 @@
 
     .contacts__modules-item > p:nth-child(1) {
         max-width: 90%;
+    }
+    .contacts__modules-dropdown {
+        padding-left: initial;
     }
 }
