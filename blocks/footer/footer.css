@@ -69,10 +69,12 @@
 
 .footer__bottom-form {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   max-width: calc(100vw - 30px);
   overflow: hidden;
+  min-width: 150px;
 }
 
 .footer__bottom-form input {
@@ -80,9 +82,9 @@
   border: none;
   outline: none;
   color: white; 
-  max-width: 150px;
+  min-width: 150px;
+  padding: 0;
 }
-
 .footer__bottom-form input::placeholder {
   font-family: 'VP Regular';
   font-size: 20px;
@@ -103,6 +105,11 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 31px;
+  padding: 0;
+}
+
+.footer__bottom-form button:hover {
+  opacity: .6;
 }
 
 .footer__bottom-copyright {

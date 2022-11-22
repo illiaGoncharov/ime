@@ -13,13 +13,11 @@
 
     <script>
         document.addEventListener('click', (e) => {console.log(e.target)})
-        // if (event.target.classList.contains('popup_opened')) {
-        //     document.querySelector('.popup_type_order').classList.toggle('popup_opened');
-        // } 
         function popToggle(e) {
             document.querySelector('.popup_type_order').classList.toggle('popup_opened');
         }
     </script>
+
     <div class="popup popup_type_order">
         <div class="popup__container">
             <div class="popup__header">
@@ -48,10 +46,12 @@
                         <input class="form__input form__input_type_comment" type="text" id="email" name="email" placeholder="" minlength="2" maxlength="30" required>
                         <span class="form__input-error" id="title-error"></span>
                     </section>
-                    <a target="_blank" class="form__disclaimer-link" href="./images/documents/policy.pdf">
-                        <p class="form__disclaimer">Нажимая «Отправить», вы соглашаетесь с политикой обработки персональных данных</p>
-                    </a>
-                    <button class="form__submit-button" type="submit" onclick="">Отправить</button>
+                    
+                        <p class="form__disclaimer">Нажимая «Отправить», вы соглашаетесь <br> с 
+                            <a target="_blank" class="form__disclaimer-link" href="./images/documents/policy.pdf">политикой обработки персональных данных </a>
+                        </p>
+                  
+                    <button class="form__submit-button" type="submit">Отправить</button>
                 </fieldset>
             </form>
         </div>
@@ -64,7 +64,6 @@
                 <img class="header__logo" src="./images/header/header__logo.svg" alt="Логотип IME">
                 <div class="header__nav__wrapper">
                 <nav class="header__nav">
-                    <!-- <a class="header__nav-item" target="_blank" href="https://disk.yandex.ru/i/ZEnrboGPkjocQA">Услуги и цены</a> -->
                     <a class="header__nav-item" target="_blank" href="./images/documents/Услуги и цены.pdf">Услуги и цены</a>
                     <!-- <a class="header__nav-item" href="#">Для врачей</a> -->
                     <a class="header__nav-item" href="#contactsRoute">Как добраться</a>
@@ -108,7 +107,7 @@
             <section class="about-us" id="about">
                 <h2 class="about-us__title">Медицинский центр IME</h2>
                 <p class="about-us__text">
-                    Квалифицированные специалисты с многолетним опытом работы в сферах косметологии, дерматологии, трихологии, бьюти генетики и превентивной anti-age медицины с любовью относятся к нашим клиентам, подбирая индивидуальный подход к каждому для улучшения качества жизни и внешности. 
+                    Мы предлагаем комплексный подход к соверщенствованию внешности и здоровья на высоком уровне сочетания медицины, эстетики и науки. Многолетний опыт и практические наработки компании INMEDEX дают возможность успешно работать с возрастными изменениями кожи и эстетическими проблемами для улучшения качества жизни и внешности.
                 </p>
                 <video class="about-us__iframe"  controls autoplay loop>
                     <source src="./videos/about-us__video.webm" type="video/webm">
@@ -116,13 +115,13 @@
                 </video>
                 <ul class="about-us__list">
                     <li class="about-us__list-item">
-                        Мы предлагаем только качественные и эффективные процедуры, индивидуально подобранные для каждого пациента
+                        Медицинский центр IME основан на базе научной деятельности группы компаний INMEDEX
                     </li>
                     <li class="about-us__list-item">
-                        Комплексный подход к здоровью и красоте для сохранения молодости, профилактики старения 
+                        Квалифицированные специалистыи и качественные оригинальные препараты
                     </li>
                     <li class="about-us__list-item">
-                        Медицинский центр IME основан на базе научной  деятельности группы компаний INMEDEX 
+                        Индивидуальный подход к каждому пациенту
                     </li>
                 </ul>
             </section>
@@ -136,7 +135,9 @@
                             <p class="big-cards__header">Косметология лица</p>
                         </div>
                        
-                        <p class="big-cards__text">Если вы хотите избавиться от эстетических несовершенств или улучшить ваш образ, выберите из множества косметических процедур именно то</p>
+                        <p class="big-cards__text">
+                            Безоперационное омоложение с помощью сочетанных методик. Улучшение качества и тонуса кожи. Формирование чёткого овала и контуров
+                        </p>
 
                         <p class="big-cards__text hidden">
                             - Биоревитализация и мезотерапия <br>
@@ -153,7 +154,9 @@
                             <img src="./images/cards/cards__body.svg" alt="">
                             <p class="big-cards__header">Косметология тела</p>
                         </div>
-                        <p class="big-cards__text">Современная косметология позволяет улучшить гладкость, упругость и контуры тела c помощью процедур</p>
+                        <p class="big-cards__text">
+                            Современная косметология позволяет улучшить состояние и контуры тела с помощью инъекционных и аппаратных процедур
+                        </p>
 
                         <p class="big-cards__text hidden">
                             - Аутоплазмотерапия <br>
@@ -172,7 +175,9 @@
                             <img src="./images/cards/cards__tri.svg" alt="">
                             <p class="big-cards__header">Трихология</p>
                         </div>
-                        <p class="big-cards__text">В нашем медицинском центре работает квалифицированный врач-трихолог с многолетнем опытом работы, который поможет вам восстановить</p>
+                        <p class="big-cards__text">
+                            Квалифицированный врач-трихолог с многолетним опытом поможет восстановить рост и качество волос, улучшить состояние кожи головы
+                        </p>
 
                         <p class="big-cards__text hidden">
                             - Диагностика состояния волос и кожи головы <br>
@@ -186,7 +191,9 @@
                             <img src="./images/cards/cards__med.svg" alt="">
                             <p class="big-cards__header">Превентивная медицина</p>
                         </div>
-                        <p class="big-cards__text">Это направление современной медицины, которое изучает организм как единое целое. Сохраняет здоровье и улучшает качество жизни</p>
+                        <p class="big-cards__text">
+                            Это направление современной медицины изучает организм как единое целое, сохраняет здоровье и улучшает качество жизни.
+                        </p>
 
                         <p class="big-cards__text hidden">
                             - ВЛОК <br>
@@ -494,61 +501,13 @@
                         ООО “Международный медицинский эксперт”
                     </p>
                     <form class="footer__bottom-form" action="">
-                        <input type="Подписаться" placeholder="Подписаться">
+                        <input type="Подписаться" placeholder="Ваш email"> 
                         <button>Отправить</button>
                     </form>
                 </div>
             </div>
         </footer>
-        
-        <!-- <section class="popup popup__lab">
-            <div class="popup__box">
-                <button class="popup__close"></button>
-                <h3 class="popup__header">Анализ</h3>
-                <img src="./images/for_popup.png" alt="" class="popup__image">
-                <div class="popup__text-box">
-                    <p class="popup__text">Учебные лаборатории оснащены современным компьютерным оборудованием,
-                        техническими
-                        средствами защиты
-                        информации, программными и программно-аппаратными комплексами средств защиты, разработанными
-                        ведущими
-                        производителями: Positive Technologies, Infotecs, SearchInform, «Лаборатория ППШ» и других
-                        вендоров.
-                        Некоторые из лабораторных установок являются уникальными по своим исследовательским задачам.
-                    </p>
-                    <p class="popup__text">Начиная с первого курса бакалавриата, студенты погружаются в область их
-                        будущей
-                        профессиональной
-                        деятельности, активно развивают навыки программирования, исследования защищенности информации в
-                        независимости от формы ее представления, проектирования комплексных интегрированных систем
-                        защиты
-                        информации, проходят различные виды практик.
-                    </p>
-                    <ul class="popup__ul">
-                        В состав факультета входит ряд научных лабораторий и центров, в которых проводятся исследования:
-                        <li class="popup__text-li"> безопасные киберфизические системы;
-                        </li>
-                        <li class="popup__text-li"> разработка средств защиты информации;
-                        </li>
-                        <li class="popup__text-li"> функциональная безопасность беспилотных транспортных средств;
-                        </li>
-                        <li class="popup__text-li"> теория информации и кодирования;
-                        </li>
-                        <li class="popup__text-li"> информационные процессы в Интернет и безопасность виртуального
-                            пространства;
-                        </li>
-                        <li class="popup__text-li"> интеллектуальные защищенные системы мультиагентного взаимодействия и
-                            пр.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->
     </div>
-
-
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
-    <!-- <script type="module" src="./scripts/index.js"></script> -->
     
     <script src="./scripts/components/cards/cards.js"></script>
     <script src="./scripts/components/conctact-modules/conctact-modules.js"></script>
