@@ -24,7 +24,9 @@
                 <h4 class="popup__title">Записаться на прием</h4>
                 <buttom class="popup__close-button" type="reset" type="buttom" onclick="popToggle()"></buttom>
             </div>
-            <form class="form form_type_order" action="./scripts/php/send.php" name="order-form" autocomplete="off" novalidate method="post">
+
+            <form class="form form_type_order" name="order-form" action="./scripts/php/send.php"
+                method="post">
                 <fieldset class="form__input-container">
                     <section class="form__input-section">
                         <label  class="form__label" for="phone">Ваш телефон</label>
@@ -50,15 +52,15 @@
                         <p class="form__disclaimer">Нажимая «Отправить», вы соглашаетесь <br> с 
                             <a target="_blank" class="form__disclaimer-link" href="./images/documents/policy.pdf">политикой обработки персональных данных </a>
                         </p>
-                  
-                    <button class="form__submit-button" type="submit">Отправить</button>
+                        
+                        <input class="form__submit-button" type="submit" name="submit" value="Отправить">
+                        <!-- <button class="form__submit-button" type="submit">Отправить</button> -->
                 </fieldset>
             </form>
         </div>
     </div> 
 
     <div class="page">
-
         <header class="header">
             <div class="header__wrapper">
                 <img class="header__logo" src="./images/header/header__logo.svg" alt="Логотип IME">

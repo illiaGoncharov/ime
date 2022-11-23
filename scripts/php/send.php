@@ -1,36 +1,27 @@
 <?php  
- 
-if(isset($_POST['submit'])) {
-    $mailto = "karnebero@gmail.com";  
-    $subject = "Новая заявка с сайта IME"
-    $phone = $_POST['phone']; 
-    $name = $_POST['name']; 
-    $comment = $_POST['comment']; 
-    $email = $_POST['email']; 
+    if(isset($_POST['submit'])) {
 
-    // Письма
-    $message = "Имя клиента: " . $name . "\n"
-    . "Телефон: " . $phone . "\n\n"
-    . "Комментарий / Интересующая процедура: " . "\n" . $_POST['comment'];
-    $message2 = "Здравствуйте, " . $name . "\n"
-    . "Cпасибо за вашу заявку! Мы уже начали работать над вашим запросом и свяжемся с вами в ближайшее время" . "\n";
+        $mailto = "ilia.m.goncharov@gmail.com, kanebero@gmail.com, Julia.boyko@inmedex.ru";  
+        $subject = "Новая заявка с сайта IME";
+        $subject2 = "Спасибо за вашу заявку!";
 
-    // $confirmation = "Cообщение успешно отправлено!"; 
-    // $confirmation2 = "Cообщение почему-то не удалось отправить :( "; 
+        $phone = $_POST['phone']; 
+        $name = $_POST['name']; 
+        $email = $_POST['email']; 
 
-    // Заголовки 
-    $headers = "Отправлено: " . $email; // Сообщенине для IME 
-    $headers2 = "Отправлено: " . $mailto; // Сообщение для клиента 
-    
-    // PHP mailer function
-    mail($mailto, $subject, $message, $headers); // This email sent to My address
-    mail($email, $confirmation, $message2, $headers2); // This confirmation email to client
-    
-    // if ($result1 && $result2) {
-    // $success =  $confirmation;
-    // } else {
-    // $failed = $confirmation2;
-    // }
+        // Письма
+        $message = "Имя клиента: " . $name . "\n\n" . "Телефон: " . $phone . "\n\n" . "Комментарий / Интересующая процедура: " . $_POST['comment'] . "\n\n" . "E-mail клиента " . $email;
+        $message2 = "Здравствуйте, " . $name . "\n\n" . "Cпасибо за вашу заявку! Мы уже начали работать над вашим запросом и свяжемся с вами в ближайшее время";
 
-}
+        // Заголовки 
+        $headers = "Отправлено: " . $email; // Сообщенине для IME 
+        $headers2 = "Отправлено: " . $mailto; // Сообщение для клиента 
+        
+        // PHP mailer function
+        mail($mailto, $subject, $message, $headers); // This email sent to My address
+        mail($email, $subject2, $message2, $headers2); // This confirmation email to client
+
+        echo "Благодарим за заявку,  " . $name . ", в ближайшее время мы с вами свяжемся.";
+    }
+
 ?>
