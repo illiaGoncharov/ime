@@ -103,7 +103,6 @@
                 <img class="header__burger-icon" src="./images/header/menu-icon.svg" alt="">
             </div>
         </header>
-
         <main class="main">
             <section class="intro">
                 <div class="intro__wrapper">
@@ -111,6 +110,16 @@
                         Медицинский центр косметологии <br> с научным подходом к каждому пациенту
                     </h1>
                     <button onclick="popToggle()" class="intro__button">Записаться</button>
+
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="../../images/intro/intro__bg.jpg" alt="0"></div>
+                            <div class="swiper-slide"><img src="../../images/intro/intro__bg2.png" alt="1"></div>
+                            <div class="swiper-slide"><img src="../../images/intro/intro__bg3.png" alt="2"></div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -537,6 +546,31 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            slidesPerView: 1,
+            loop: true,
+            effect: "fade",
+            
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false
+            },
+
+            
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
     <script src="./scripts/components/cards/cards.js"></script>
     <script src="./scripts/components/conctact-modules/conctact-modules.js"></script>

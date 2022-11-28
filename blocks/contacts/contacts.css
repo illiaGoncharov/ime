@@ -154,4 +154,10 @@
     .contacts__modules-dropdown {
         padding-left: initial;
     }
+
+    .contacts__modules-item a {
+        height: auto;
+        padding-bottom: 15px;
+    }
+    
 }
