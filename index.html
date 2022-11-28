@@ -7,19 +7,26 @@
     <title>IME</title>
     <link rel="stylesheet" href="./vendor/normalize.css">
     <link rel="stylesheet" href="./pages/index.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body class="body">
 
     <script>
-        document.addEventListener('click', (e) => {console.log(e.target)})
         function popToggle(e) {
             document.querySelector('.popup_type_order').classList.toggle('popup_opened');
+            document.addEventListener('click', (e) => {
+                if (e.target.matches('.popup_opened')) {
+                    document.querySelector('.popup_type_order').classList.toggle('popup_opened');
+                } else {}
+            })
         }
     </script>
 
     <div class="popup popup_type_order">
         <div class="popup__container">
+
             <div class="popup__header">
                 <h4 class="popup__title">Записаться на прием</h4>
                 <buttom class="popup__close-button" type="reset" type="buttom" onclick="popToggle()"></buttom>
@@ -57,6 +64,7 @@
                         <!-- <button class="form__submit-button" type="submit">Отправить</button> -->
                 </fieldset>
             </form>
+
         </div>
     </div> 
 
@@ -109,9 +117,9 @@
             <section class="about-us" id="about">
                 <h2 class="about-us__title">Медицинский центр IME</h2>
                 <p class="about-us__text">
-                    Мы предлагаем комплексный подход к соверщенствованию внешности и здоровья на высоком уровне сочетания медицины, эстетики и науки. Многолетний опыт и практические наработки компании INMEDEX дают возможность успешно работать с возрастными изменениями кожи и эстетическими проблемами для улучшения качества жизни и внешности.
+                    Мы предлагаем комплексный подход к совершенствованию внешности и здоровья на высоком уровне сочетания медицины, эстетики и науки. Многолетний опыт и практические наработки компании INMEDEX дают возможность успешно работать с возрастными изменениями кожи и эстетическими проблемами для улучшения качества жизни и внешности.
                 </p>
-                <video class="about-us__iframe"  controls autoplay loop>
+                <video class="about-us__iframe" controls autoplay loop muted>
                     <source src="./videos/about-us__video.webm" type="video/webm">
                     Your browser does not support the video tag.
                 </video>
@@ -120,7 +128,7 @@
                         Медицинский центр IME основан на базе научной деятельности группы компаний INMEDEX
                     </li>
                     <li class="about-us__list-item">
-                        Квалифицированные специалистыи и качественные оригинальные препараты
+                        Квалифицированные специалисты и качественные оригинальные препараты
                     </li>
                     <li class="about-us__list-item">
                         Индивидуальный подход к каждому пациенту
@@ -138,7 +146,7 @@
                         </div>
                        
                         <p class="big-cards__text">
-                            Безоперационное омоложение с помощью сочетанных методик. Улучшение качества и тонуса кожи. Формирование чёткого овала и контуров
+                            Безоперационное омоложение с помощью сочетанных методик. Улучшение качества и тонуса кожи. Формирование чёткого овала и контуров.
                         </p>
 
                         <p class="big-cards__text hidden">
@@ -157,7 +165,7 @@
                             <p class="big-cards__header">Косметология тела</p>
                         </div>
                         <p class="big-cards__text">
-                            Современная косметология позволяет улучшить состояние и контуры тела с помощью инъекционных и аппаратных процедур
+                            Современная косметология позволяет улучшить состояние и контуры тела с помощью инъекционных и аппаратных процедур.
                         </p>
 
                         <p class="big-cards__text hidden">
@@ -178,7 +186,7 @@
                             <p class="big-cards__header">Трихология</p>
                         </div>
                         <p class="big-cards__text">
-                            Квалифицированный врач-трихолог с многолетним опытом поможет восстановить рост и качество волос, улучшить состояние кожи головы
+                            Квалифицированный врач-трихолог с многолетним опытом поможет восстановить рост и качество волос, улучшить состояние кожи головы.
                         </p>
 
                         <p class="big-cards__text hidden">
@@ -207,40 +215,58 @@
                 </div>
                 <div class="small-cards__wrapper">
                     <div class="small-cards__row"с>
-                        <div class="small-cards__item" id="small_so" >
-                            <p class="small-cards__header">Исследование So-Check</p>
-                            <p class="small-cards__text">Диагностика, позволяющая проанализировать содержание в тканях витаминов, микроэлементов, антиоксидантов, тяжелых металлов, основанная на методе фотоспектрометрии</p>
-                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf" class="small-cards__link">Как подготовиться </a>
-                        </div>
-                        <div class="small-cards__item" id="small_gen">
-                            <p class="small-cards__header">Генетические исследования</p>
-                            <p class="small-cards__text">В косметологии позволяют проанализировать вашу ДНК для составления индивидуальных программ терапии и профилактики старения, воспаления, пигментации, потери волос</p>
-                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf" class="small-cards__link">Как подготовиться </a>
-                        </div>
-                        <div class="small-cards__item" id="small_iv">
-                            <p class="small-cards__header">IV-терапия</p>
-                            <p class="small-cards__text">Внутривенная терапия (капельницы). Это современный метод улучшения самочувствия и сохранения молодости, а также лечения и профилактики заболеваний и дисфункций</p>
-                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf" class="small-cards__link">Как подготовиться </a>
-                        </div>
-                    </div>
-                    <div class="small-cards__row">
-                        <div class="small-cards__item" id="small_rsl">
-                            <p class="small-cards__header">RSL-скульптурирование</p>
-                            <p class="small-cards__text">Процедура сочетает в себе аппаратный массаж методом роллерной виброкомпрессии и LED-терапии. Корректирует фигуру, укрепляет мышцы, выводит лишнюю жидкость из организма</p>
-                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf" class="small-cards__link">Как подготовиться</a>
+                        <div class="small-cards__item" id="small_lift">
+                            <p class="small-cards__header">Нитевой лифтинг</p>
+                            <p class="small-cards__text">Современный метод подтяжки кожи лица, шеи и тела без
+                                хирургического вмешательства. Во время процедуры под кожу вводятся нити для уплотнения и
+                                фиксации кожи</p>
+                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
+                                class="small-cards__link">Как подготовиться</a>
                             <!-- <a href="" class="small-cards__link">До/после</a> -->
                         </div>
                         <div class="small-cards__item" id="small_contur">
                             <p class="small-cards__header">Контурная пластика</p>
-                            <p class="small-cards__text">Косметологическая процедура, которая позволяет с помощью введения филера восполнить недостающие объемы, вернуть молодость и скорректировать черты лица</p>
-                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf" class="small-cards__link">Как подготовиться</a>
+                            <p class="small-cards__text">Косметологическая процедура, которая позволяет с помощью
+                                введения филера восполнить недостающие объемы, вернуть молодость и скорректировать черты
+                                лица</p>
+                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
+                                class="small-cards__link">Как подготовиться</a>
                             <!-- <a href="" class="small-cards__link">До/после</a> -->
                         </div>
-                        <div class="small-cards__item" id="small_lift">
-                            <p class="small-cards__header">Нитевой лифтинг</p>
-                            <p class="small-cards__text">Современный метод подтяжки кожи лица, шеи и тела без хирургического вмешательства. Во время процедуры под кожу вводятся нити для уплотнения и фиксации кожи</p>
-                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf" class="small-cards__link">Как подготовиться</a>
+                        <div class="small-cards__item" id="small_rsl">
+                            <p class="small-cards__header">RSL-скульптурирование</p>
+                            <p class="small-cards__text">Процедура сочетает в себе аппаратный массаж методом роллерной
+                                виброкомпрессии и LED-терапии. Корректирует фигуру, укрепляет мышцы, выводит лишнюю
+                                жидкость из организма</p>
+                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
+                                class="small-cards__link">Как подготовиться</a>
                             <!-- <a href="" class="small-cards__link">До/после</a> -->
+                        </div>
+                    </div>
+                    <div class="small-cards__row">
+                        <div class="small-cards__item" id="small_iv">
+                            <p class="small-cards__header">IV-терапия</p>
+                            <p class="small-cards__text">Внутривенная терапия (капельницы). Это современный метод
+                                улучшения самочувствия и сохранения молодости, а также лечения и профилактики
+                                заболеваний и дисфункций</p>
+                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
+                                class="small-cards__link">Как подготовиться </a>
+                        </div>
+                        <div class="small-cards__item" id="small_gen">
+                            <p class="small-cards__header">Генетические исследования</p>
+                            <p class="small-cards__text">В косметологии позволяют проанализировать вашу ДНК для
+                                составления индивидуальных программ терапии и профилактики старения, воспаления,
+                                пигментации, потери волос</p>
+                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
+                                class="small-cards__link">Как подготовиться </a>
+                        </div>
+                        <div class="small-cards__item" id="small_so">
+                            <p class="small-cards__header">Исследование So-Check</p>
+                            <p class="small-cards__text">Диагностика, позволяющая проанализировать содержание в тканях
+                                витаминов, микроэлементов, антиоксидантов, тяжелых металлов, основанная на методе
+                                фотоспектрометрии</p>
+                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
+                                class="small-cards__link">Как подготовиться </a>
                         </div>
                     </div>
                 </div>
@@ -334,7 +360,7 @@
                     </li>
                     <li class="contacts-list-item">
                         <p>Адрес</p>
-                        <p>Москва, 3-я улица Ямского поля, д.18, офис 208, 2 этаж</p>
+                        <p>Москва, 3-я улица Ямского поля, д.18, 2 этаж, IME медицинский центр</p>
                     </li>
                 </ul>
                 
@@ -481,7 +507,6 @@
                 </p>
                 <hr class="footer__line">
                 <div class="footer__contacts">
-                    <!-- <a href="tel:+79154244172"> -->
                     <a href="tel:89168003562">
                         <p class="footer__contacts-text">
                             +7 915 424 41 72
@@ -495,7 +520,7 @@
                 </div>
                 <hr class="footer__line">
                 <p class="footer__address">
-                    Москва, 3-я улица Ямского поля, <br> д.18, офис 208, 2 этаж
+                    Москва, 3-я улица Ямского поля, <br> д.18, 2 этаж, IME медицинский центр
                 </p>
                 <div class="footer__bottom">
                     <p class="footer__bottom-copyright">
@@ -510,7 +535,8 @@
             </div>
         </footer>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <script src="./scripts/components/cards/cards.js"></script>
     <script src="./scripts/components/conctact-modules/conctact-modules.js"></script>
 </body>

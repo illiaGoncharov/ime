@@ -31,7 +31,7 @@
 
 .popup__container {
     position: absolute;
-    width: 500px;
+    min-width: 500px;
     left: calc((100vw - 500px) / 2);
     max-width: calc(100vw - 30px);
     padding-top: 50px;
@@ -84,7 +84,6 @@
 .form__input {
     margin-top: 10px;
     width: 100%;
-    max-width: calc(100% - 30px);
     background: rgba(231, 242, 248, 0.25);
     opacity: 0.9;
     border: none;
@@ -141,7 +140,9 @@
 
 @media screen and (max-width: 768px) {
     .popup__container {
+        min-width: calc(100vw - 30px);
         padding-top: 100px;
+        width: calc(100vw - 30px);
         left: 15px;
     }
 
