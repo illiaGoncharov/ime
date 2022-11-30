@@ -22,6 +22,14 @@
                 } else {}
             })
         }
+
+        function mobileMenuToggle(e) {
+            document.querySelector('.mobile-header').classList.toggle('opened');
+        }
+
+        function openLightbox(params) {
+            
+        }
     </script>
 
     <div class="popup popup_type_order">
@@ -68,7 +76,15 @@
         </div>
     </div> 
 
+    <div class="popup popup_type_lightbox"></div>
+
     <div class="page">
+        <div class="mobile-header">
+            <a class="header__nav-item" target="_blank" href="./images/documents/Услуги и цены.pdf">Услуги и
+                цены</a>
+            <a class="header__nav-item" href="#">Для врачей</a>
+            <a class="header__nav-item" href="#contactsRoute">Как добраться</a>
+        </div>
         <header class="header">
             <div class="header__wrapper">
                 <img class="header__logo" src="./images/header/header__logo.svg" alt="Логотип IME">
@@ -95,29 +111,31 @@
                             <img src="./images/header/header__wa.png" alt=""></a>
                         <a class="" href="https://t.me/+79154244172">
                             <img src="./images/header/header__tg.png" alt=""></a>
-                        <a class="" href="tel:89154244172">
+                        <a class="mobile-menu__button" href="tel:89154244172">
                             <img src="./images/header/header__ph.png" alt=""></a>
                     </div>
                 </nav>
             </div>
-                <img class="header__burger-icon" src="./images/header/menu-icon.svg" alt="">
+                <img class="header__burger-icon" src="./images/header/menu-icon.svg" onclick="mobileMenuToggle();"
+                    alt="">
             </div>
         </header>
         <main class="main">
             <section class="intro">
                 <div class="intro__wrapper">
-                    <h1 class="intro__title">
-                        Медицинский центр косметологии <br> с научным подходом к каждому пациенту
-                    </h1>
-                    <button onclick="popToggle()" class="intro__button">Записаться</button>
+                    <div class="itro__ui">
+                        <h1 class="intro__title">
+                            Медицинский центр косметологии <br> с научным подходом к каждому пациенту
+                        </h1>
+                        <button onclick="popToggle()" class="intro__button">Записаться</button>
+                        <div class="swiper-pagination swiper-pagination__controller"></div>
+                    </div>
 
-                    <div class="swiper">
+                    <div class="swiper" id="swiperIntroD">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img src="./images/intro/intro__bg.jpg" alt="0"></div>
-                            <div class="swiper-slide"><img src="./images/intro/intro__bg2.png" alt="1"></div>
-                            <div class="swiper-slide"><img src="./images/intro/intro__bg3.png" alt="2"></div>
-                            <!-- If we need pagination -->
-                            <div class="swiper-pagination"></div>
+                            <div class="swiper-slide"><img src="./images/intro/intro__bg2.jpg" alt="1"></div>
+                            <div class="swiper-slide"><img src="./images/intro/intro__bg3.jpg" alt="2"></div>
                         </div>
                     </div>
                 </div>
@@ -232,7 +250,7 @@
                                 фиксации кожи</p>
                             <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
                                 class="small-cards__link">Как подготовиться</a>
-                            <!-- <a href="" class="small-cards__link">До/после</a> -->
+                            <a href="" class="small-cards__link" >До/после</a>
                         </div>
                         <div class="small-cards__item" id="small_contur">
                             <p class="small-cards__header">Контурная пластика</p>
@@ -241,7 +259,7 @@
                                 лица</p>
                             <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
                                 class="small-cards__link">Как подготовиться</a>
-                            <!-- <a href="" class="small-cards__link">До/после</a> -->
+                            <a href="" class="small-cards__link">До/после</a>
                         </div>
                         <div class="small-cards__item" id="small_rsl">
                             <p class="small-cards__header">RSL-скульптурирование</p>
@@ -250,7 +268,7 @@
                                 жидкость из организма</p>
                             <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
                                 class="small-cards__link">Как подготовиться</a>
-                            <!-- <a href="" class="small-cards__link">До/после</a> -->
+                            <a href="" class="small-cards__link">До/после</a>
                         </div>
                     </div>
                     <div class="small-cards__row">
@@ -546,31 +564,8 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            slidesPerView: 1,
-            loop: true,
-            effect: "fade",
-            
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false
-            },
 
-            
-
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+    <script src="./scripts/components/swipers/swipers.js"></script>
 
     <script src="./scripts/components/cards/cards.js"></script>
     <script src="./scripts/components/conctact-modules/conctact-modules.js"></script>
