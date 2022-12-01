@@ -12,6 +12,42 @@
     z-index: 999;
 }
 
+.popup_type_lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .20s, opacity .20s linear;
+    z-index: 999;
+}
+.popup_type_lightbox.popup_opened {
+    visibility: visible;
+    opacity: 1;
+} 
+.popup__img {
+    max-height: inherit;
+    max-width: inherit;
+    object-fit: cover;
+    margin: auto;
+    position: relative;
+}
+.popup__img-figure {
+    margin: auto;
+    max-width: 75vw;
+    max-height: 75vh;
+    position: relative;
+}
+.popup__img-caption {
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.21;
+    margin-top: 10px;
+}
 .popup_opened {
     visibility: visible;
     opacity: 1;

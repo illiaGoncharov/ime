@@ -26,10 +26,6 @@
         function mobileMenuToggle(e) {
             document.querySelector('.mobile-header').classList.toggle('opened');
         }
-
-        function openLightbox(params) {
-            
-        }
     </script>
 
     <div class="popup popup_type_order">
@@ -76,7 +72,13 @@
         </div>
     </div> 
 
-    <div class="popup popup_type_lightbox"></div>
+    <div class="popup popup_type_lightbox">
+        <figure class="popup__img-figure">
+            <img class="popup__img" src="#" alt="#">
+            <figcaption class="popup__img-caption"></figcaption>
+        </figure>
+    </div>
+
 
     <div class="page">
         <div class="mobile-header">
@@ -120,6 +122,7 @@
                     alt="">
             </div>
         </header>
+
         <main class="main">
             <section class="intro">
                 <div class="intro__wrapper">
@@ -248,9 +251,25 @@
                             <p class="small-cards__text">Современный метод подтяжки кожи лица, шеи и тела без
                                 хирургического вмешательства. Во время процедуры под кожу вводятся нити для уплотнения и
                                 фиксации кожи</p>
-                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
-                                class="small-cards__link">Как подготовиться</a>
-                            <a href="" class="small-cards__link" >До/после</a>
+                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf" class="small-cards__link">Как подготовиться</a>
+
+                            <a id="liftingBA" href="#" class="small-cards__link small-cards__link_type_before-after">
+                                До/после
+                            </a>
+
+                            <div class="small-cards__hidden-container" aria-hidden="true">
+                                <img class="liftingBA" src="./images/cards/small_lift/small_lift_1.jpg" alt="1">
+                                <img class="liftingBA" src="./images/cards/small_lift/small_lift_2.jpg" alt="2">
+                                <img class="liftingBA" src="./images/cards/small_lift/small_lift_3.jpg" alt="3">
+                                <img class="liftingBA" src="./images/cards/small_lift/small_lift_4.jpg" alt="4">
+                                <img class="liftingBA" src="./images/cards/small_lift/small_lift_5.jpg" alt="5">
+                                <img class="liftingBA" src="./images/cards/small_lift/small_lift_6.jpg" alt="6">
+                                <img class="liftingBA" src="./images/cards/small_lift/small_lift_7.jpg" alt="7">
+                                <img class="liftingBA" src="./images/cards/small_lift/small_lift_8.jpg" alt="8">
+                                <img class="liftingBA" src="./images/cards/small_lift/small_lift_9.jpg" alt="9">
+                                <img class="liftingBA" src="./images/cards/small_lift/small_lift_10.jpg" alt="10">
+                                <img class="liftingBA" src="./images/cards/small_lift/small_lift_11.jpg" alt="11">
+                            </div>
                         </div>
                         <div class="small-cards__item" id="small_contur">
                             <p class="small-cards__header">Контурная пластика</p>
@@ -259,40 +278,83 @@
                                 лица</p>
                             <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
                                 class="small-cards__link">Как подготовиться</a>
-                            <a href="" class="small-cards__link">До/после</a>
+
+                            <a id="plasticBA" href="#" class="small-cards__link small-cards__link_type_before-after">
+                                До/после
+                            </a>
+
+                            <div class="small-cards__hidden-container" aria-hidden="true">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_1.jpg" alt="1">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_2.jpg" alt="2">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_3.jpg" alt="3">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_4.jpg" alt="4">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_5.jpg" alt="5">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_6.jpg" alt="6">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_7.jpg" alt="7">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_8.jpg" alt="8">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_9.jpg" alt="9">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_10.jpg" alt="10">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_11.jpg" alt="11">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_12.jpg" alt="12">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_13.jpg" alt="13">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_14.jpg" alt="14">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_15.jpg" alt="15">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_16.jpg" alt="16">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_17.jpg" alt="17">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_18.jpg" alt="18">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_19.jpg" alt="19">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_20.jpg" alt="20">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_21.jpg" alt="21">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_22.jpg" alt="22">
+                            </div>
                         </div>
                         <div class="small-cards__item" id="small_rsl">
                             <p class="small-cards__header">RSL-скульптурирование</p>
                             <p class="small-cards__text">Процедура сочетает в себе аппаратный массаж методом роллерной
                                 виброкомпрессии и LED-терапии. Корректирует фигуру, укрепляет мышцы, выводит лишнюю
                                 жидкость из организма</p>
-                            <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
-                                class="small-cards__link">Как подготовиться</a>
-                            <a href="" class="small-cards__link">До/после</a>
+                            <a target="_blank"  href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf" class="small-cards__link">
+                                Как подготовиться
+                            </a>
+
+                            <a id="rslBA" href="#" class="small-cards__link small-cards__link_type_before-after">
+                                До/после
+                            </a>
+
+                            <div class="small-cards__hidden-container" aria-hidden="true">
+                                <img class="rslBA" src="./images/cards/small_rsl/small_rsl_1.jpg" alt="1">
+                                <img class="rslBA" src="./images/cards/small_rsl/small_rsl_2.jpg" alt="2">
+                                <img class="rslBA" src="./images/cards/small_rsl/small_rsl_3.jpg" alt="3">
+                                <img class="rslBA" src="./images/cards/small_rsl/small_rsl_4.jpg" alt="4">
+                                <img class="rslBA" src="./images/cards/small_rsl/small_rsl_5.jpg" alt="5">
+                                <img class="rslBA" src="./images/cards/small_rsl/small_rsl_6.jpg" alt="6">
+                                <img class="rslBA" src="./images/cards/small_rsl/small_rsl_7.jpg" alt="7">
+                            </div>
+
                         </div>
                     </div>
                     <div class="small-cards__row">
                         <div class="small-cards__item" id="small_iv">
                             <p class="small-cards__header">IV-терапия</p>
-                            <p class="small-cards__text">Внутривенная терапия (капельницы). Это современный метод
-                                улучшения самочувствия и сохранения молодости, а также лечения и профилактики
-                                заболеваний и дисфункций</p>
+                            <p class="small-cards__text">
+                                Внутривенная терапия (капельницы). Это современный метод улучшения самочувствия и сохранения молодости, а также лечения и профилактики заболеваний и дисфункций
+                            </p>
                             <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
                                 class="small-cards__link">Как подготовиться </a>
                         </div>
                         <div class="small-cards__item" id="small_gen">
                             <p class="small-cards__header">Генетические исследования</p>
-                            <p class="small-cards__text">В косметологии позволяют проанализировать вашу ДНК для
-                                составления индивидуальных программ терапии и профилактики старения, воспаления,
-                                пигментации, потери волос</p>
+                            <p class="small-cards__text">
+                                В косметологии позволяют проанализировать вашу ДНК для составления индивидуальных программ терапии и профилактики старения, воспаления, пигментации, потери волос
+                            </p>
                             <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
                                 class="small-cards__link">Как подготовиться </a>
                         </div>
                         <div class="small-cards__item" id="small_so">
                             <p class="small-cards__header">Исследование So-Check</p>
-                            <p class="small-cards__text">Диагностика, позволяющая проанализировать содержание в тканях
-                                витаминов, микроэлементов, антиоксидантов, тяжелых металлов, основанная на методе
-                                фотоспектрометрии</p>
+                            <p class="small-cards__text">
+                                Диагностика, позволяющая проанализировать содержание в тканях витаминов, микроэлементов, антиоксидантов, тяжелых металлов, основанная на методе фотоспектрометрии
+                            </p>
                             <a target="_blank" href="./images/documents/Рекоменадции_по_подготовке_и_реобилитации.pdf"
                                 class="small-cards__link">Как подготовиться </a>
                         </div>
@@ -562,10 +624,12 @@
                 </div>
             </div>
         </footer>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
     <script src="./scripts/components/swipers/swipers.js"></script>
+
+    <script src="./scripts/components/before-after/before-after.js"></script>
 
     <script src="./scripts/components/cards/cards.js"></script>
     <script src="./scripts/components/conctact-modules/conctact-modules.js"></script>

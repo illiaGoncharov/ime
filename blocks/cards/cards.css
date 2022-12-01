@@ -143,6 +143,10 @@
     width: 35px;
 }
 
+.small-cards__hidden-container {
+    display: none;
+}
+
 .cards__button {
     display: inline-block;
     margin-top: 75px;
