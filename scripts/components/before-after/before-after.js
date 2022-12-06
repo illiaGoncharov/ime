@@ -123,7 +123,7 @@ document.querySelectorAll('.small-cards__link_type_before-after').forEach((item)
     });
 });
 
-const popupList = document.querySelectorAll(".popup");
+const popupList = document.querySelectorAll(".popup_type_lightbox");
 popupList.forEach((popup) => {
     popup.addEventListener("click", (evt) => {
         closePopup();
