@@ -22,6 +22,8 @@
         mail($email, $subject2, $message2, $headers2); // This confirmation email to client
 
         echo "Благодарим за заявку,  " . $name . ", в ближайшее время мы с вами свяжемся.";
+
+        header("location:index.html");  
     }
 
 ?>
