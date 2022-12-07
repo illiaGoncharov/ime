@@ -97,7 +97,13 @@
     background-position: center;
     background-size: cover;
     cursor: pointer;
+    appearance: initial;
     -webkit-appearance: none;
+}
+
+.popup__console {
+    display: flex;
+    justify-content: space-between;
 }
 
 
