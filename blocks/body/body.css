@@ -26,3 +26,28 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 0px;
 }
+
+.thanks__page {
+    font-family: 'VP Regular';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    background-color: #26699C;
+}
+
+.thanks__header {
+    font-size: 2em;
+    margin: 0;
+    text-align: center;
+    padding-top: 30vh;
+    color: white;
+    font-weight: 400;
+}
+
+.thanks__link {
+    text-align: center;
+    padding-top: 5vh;
+    display: block;
+    text-decoration: underline;
+    color: white;
+}
