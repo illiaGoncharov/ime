@@ -52,6 +52,14 @@
     z-index: 10;
 }
 
+.intro__title_type_partner {
+    top: initial;
+    left: initial;
+    position: absolute;
+    bottom: 45px;
+    z-index: 15;
+}
+
 .intro__button{
     background-color: transparent;
     cursor: pointer;

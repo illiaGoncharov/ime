@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IME - Для врачей</title>
+    <link rel="stylesheet" href="./vendor/normalize.css">
+    <link rel="stylesheet" href="./pages/index.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/fav-icon/">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/fav-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/fav-icon/favicon-16x16.png">
+    <link rel="manifest" href="./images/fav-icon/site.webmanifest">
+    <link rel="mask-icon" href="./images/fav-icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="body">
+
+    <!-- перенести в общие файлы -->
+    <script>
+        function popToggle(e) {
+            document.querySelector('.popup_type_order').classList.toggle('popup_opened');
+            document.addEventListener('click', (e) => {
+                if (e.target.matches('.popup_opened')) {
+                    document.querySelector('.popup_type_order').classList.toggle('popup_opened');
+                } else {}
+            })
+        }
+
+        function mobileMenuToggle(e) {
+            document.querySelector('.mobile-header').classList.toggle('opened');
+        }
+    </script>
+
+    <div class="popup popup_type_order">
+        <div class="popup__container">
+            <div class="popup__header">
+                <h4 class="popup__title">Записаться на прием</h4>
+                <buttom class="popup__close-button" type="reset" type="buttom" onclick="popToggle()"></buttom>
+            </div>
+
+            <form class="form form_type_order" name="order-form" action="./scripts/php/send.php"
+                method="post">
+                <fieldset class="form__input-container">
+                    <section class="form__input-section">
+                        <label  class="form__label" for="phone">Ваш телефон</label>
+                        <input class="form__input form__input_type_phone" type="tel" id="phone" name="phone" placeholder="" minlength="2" maxlength="30" required>
+                        <span class="form__input-error" id="title-error"></span>
+                    </section>
+                    <section class="form__input-section">
+                        <label  class="form__label" for="name">Как к вам обращаться</label>
+                        <input class="form__input form__input_type_name" type="text" id="name" name="name" placeholder="" minlength="2" maxlength="30" required>
+                        <span class="form__input-error" id="title-error"></span>
+                    </section>
+                    <section class="form__input-section">
+                        <label  class="form__label" for="name">Интересующая процедура</label>
+                        <input class="form__input form__input_type_comment" type="text" id="comment" name="comment" placeholder="" minlength="2" maxlength="30" required>
+                        <span class="form__input-error" id="title-error"></span>
+                    </section>
+                    <section class="form__input-section">
+                        <label  class="form__label" for="name">Укажите ваш e-mail</label>
+                        <input class="form__input form__input_type_comment" type="text" id="email" name="email" placeholder="" minlength="2" maxlength="30" required>
+                        <span class="form__input-error" id="title-error"></span>
+                    </section>
+                    
+                        <p class="form__disclaimer">Нажимая «Отправить», вы соглашаетесь <br> с 
+                            <a target="_blank" class="form__disclaimer-link" href="./images/documents/policy.pdf">политикой обработки персональных данных </a>
+                        </p>
+                        
+                        <input class="form__submit-button" type="submit" name="submit" value="Отправить">
+                        <!-- <button class="form__submit-button" type="submit">Отправить</button> -->
+                </fieldset>
+            </form>
+        </div>
+    </div> 
+
+    <div class="popup popup_type_lightbox">
+        <figure class="popup__img-figure">
+            <img class="popup__img" src="#" alt="#">
+            <div class="popup__console">
+                <figcaption class="popup__img-caption"></figcaption>
+                <div class="popup__button-control">
+                    <button class="prev">&#8592</button>
+                    <button class="next">&#8594</button>
+                </div>
+            </div>
+        </figure>
+    </div>
+
+    <div class="popup popup_type_submit">
+        <h2 class="popup_type_submit">Все супер!</h2>
+    </div>
+
+
+    <div class="page">
+        <div class="mobile-header">
+            <a class="header__nav-item" target="_blank" href="./images/documents/Услуги и цены.pdf">Услуги и
+                цены</a>
+            <a class="header__nav-item" href="#">Для врачей</a>
+            <a class="header__nav-item" href="#contactsRoute">Как добраться</a>
+        </div>
+        <header class="header">
+            <div class="header__wrapper">
+                <img class="header__logo" src="./images/header/header__logo.svg" alt="Логотип IME">
+                <div class="header__nav__wrapper">
+                <nav class="header__nav">
+                    <!-- <a class="header__nav-item" target="_blank" href="./images/documents/Услуги и цены.pdf">Услуги и цены</a> -->
+                    <a class="header__nav-item" href="./partnership.html">Для пациентов</a>
+                    <a class="header__nav-item" href="#contactsRoute">Как добраться</a>
+                </nav>
+                <nav class="header__nav">
+                    <div class="header__nav-item">
+                        Написать в 
+                        <a class="" href="https://wa.me/79154244172">
+                            <img src="./images/header/header__wa.png" alt=""></a>
+                        <a class="" href="https://t.me/+79154244172">
+                            <img src="./images/header/header__tg.png" alt=""></a>
+                    </div>
+                    <a class="header__nav-item" href="tel:89154244172">+7 915 424 41 72</a>
+                </nav>
+
+                <nav class="header__nav_type_mobile">
+                    <div class="header__nav-item">
+                        <a class="" href="https://wa.me/79154244172">
+                            <img src="./images/header/header__wa.png" alt=""></a>
+                        <a class="" href="https://t.me/+79154244172">
+                            <img src="./images/header/header__tg.png" alt=""></a>
+                        <a class="mobile-menu__button" href="tel:89154244172">
+                            <img src="./images/header/header__ph.png" alt=""></a>
+                    </div>
+                </nav>
+            </div>
+                <img class="header__burger-icon" src="./images/header/menu-icon.svg" onclick="mobileMenuToggle();"
+                    alt="">
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="intro">
+                <div class="intro__wrapper">
+                    <div class="itro__ui">
+                        <h1 class="intro__title intro__title_type_partner">
+                            Медицинский центр косметологии <br> с научным подходом к каждому пациенту
+                        </h1>
+                        <!-- <button onclick="popToggle()" class="intro__button">Записаться</button> -->
+                        <div class="swiper-pagination swiper-pagination__controller"></div>
+                    </div>
+
+                    <div class="swiper" id="swiperIntroD">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./images/intro/intro__bg.jpg" alt="0"></div>
+                            <div class="swiper-slide"><img src="./images/intro/intro__bg2.jpg" alt="1"></div>
+                            <div class="swiper-slide"><img src="./images/intro/intro__bg3.jpg" alt="2"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-us" id="about">
+                <h2 class="about-us__title">Медицинский центр IME</h2>
+                <p class="about-us__text">
+                    Медицинский центр IME основан на базе научной деятельности группы компаний INMEDEX. Ежегодно
+                    проводим локальные семинары и выездные научные конгрессы европейского уровня. Мы успешно обучили уже более 10 000 специалистов в сфере косметологии в России и Европе с 2014г.
+                </p>
+                <video class="about-us__iframe" controls autoplay loop muted>
+                    <source src="./videos/about-us__video.webm" type="video/webm">
+                    <source src="./videos/about-us__video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <ul class="about-us__list">
+                    <li class="about-us__list-item">
+                        Удобное расположение в центре Москвы для вас и ваших пациентов
+                    </li>
+                    <li class="about-us__list-item">
+                        Наличие медицинской и учебной лицензий
+                    </li>
+                    <li class="about-us__list-item">
+                        Групповое и индивидуальное обучение специалистов на практике
+                    </li>
+                </ul>
+            </section>
+
+            <section class="team" id="team">
+                <div class="team__wrapper">
+                    <h2 class="team__title">Условия сотрудничества</h2>
+                    <p class="team__text">
+                        Приглашаем квалифицированных специалистов в Медицинский центр IME для приема ваших пациентов на условиях:
+                        <br>
+                        <br>
+                        • Почасовая аренда кабинета (500₽/час), проведение процедур вашими препаратами.
+                        <br>
+                        <br>
+                        • Бесплатная аренда кабинета при приобретении и использовании наших препаратов(биоревитализанты,
+                        пилинги, мезококтейли, PDO-нити). Ознакомиться подробнее с препаратами можно 
+                        <a target="_blank" href="https://inmedex.ru/">на сайте компании.</a>
+                        <br>
+                        <br>
+                        • В стоимость аренды медицинского кабинета входит всё необходимое для полноценной работы
+                        специалиста.
+                    </p>
+                     <!-- <img src="./images/team/team.png" alt="" class="team__photo">    -->
+                    <h3 class="team__sub-header">
+                        Требование к специалистам
+                    </h3>
+                    <p class="team__text">
+                        • Наличие действующих документов о медицинском образовании в соответствии со специальностью:
+                        <br>
+                        -косметолог-эстетист,
+                        <br>
+                        -медицинская сестра косметологического кабинета,
+                        <br>
+                        -врач косметолог.
+                        <br>
+                        <br>
+                        • Наличие медицинской книжки.
+                    </p>
+                    <!-- СДЕЛАТЬ попапы новые + стили починить -->
+                    <!-- <a class="cards__button" onclick="popToggle()">Узнать условия</a>
+                    <a class="cards__button" onclick="popToggle()">Забронировать</a> -->
+                    <h3 class="team__sub-header">
+                        Обучение
+                    </h3>
+                    <p class="team__text">
+                        Медицинский центр IME и компания Международный Медицинский Эксперт приглашает начинающих и
+                        действующих специалистов в сфере косметологии на групповые и индивидуальные обучения. Обучение проводят сертифицированные специалисты с многолетним опытом работы в сферах косметологии и дерматологии. Обучение специалистов проходит в лекционном формате с возможной последующей отработкой практических навыков в нашем медицинском кабинете или выездное обучение в вашей клинике. Мы предлагаем обучение по следующим направлениям косметологии.
+                        <br>
+                        <br>
+                        • Химические пилинги <br>
+                        • Мезотерапия <br>
+                        • Биоревитализация <br>
+                        • Применение полимолочной кислоты в косметологии <br>
+                        • Нитевое армирование мононитями <br>
+                        • Нитевой лифтинг <br>
+                    </p>
+                    <!-- СДЕЛАТЬ попапы новые + стили починить -->
+                    <!-- <a class="cards__button" onclick="popToggle()">Cвязаться с менеджером</a> -->
+                    <h3 class="team__sub-header">
+                        Информация для врача
+                    </h3>
+                    <ul class="documents-list">
+                        <a href="./images/documents/Медицинская лицензия ООО ММЭ.pdf">
+                            <li class="documents-list-item">
+                                Информированное согласие на процедуру
+                            </li>
+                        </a>
+                        <a href="./images/documents/Лицензия на образовательную деятельность.pdf">
+                            <li class="documents-list-item">
+                                Договор об ответственности на оказание процедуры
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+            </section>
+            
+            <section class="contacts" id="contacts">
+                <h2 class="contacts__title">Контакты</h2>
+                <ul class="contacts-list">
+                    <li class="contacts-list-item">
+                        <p>Телефон</p>
+                        <a href="tel:89154244172">+7 915 424 41 72</a>
+                    </li>
+                    <li class="contacts-list-item">
+                        <p>Телефон по вопросам <br> сотрудничества, найма</p>
+                        <a href="tel:89154244172">+7 915 424 41 72</a>
+                    </li>
+                    <li class="contacts-list-item">
+                        <p>Мессенджеры</p>
+                        <div>
+                            <a href="https://wa.me/79154244172">Whatsapp</a>
+                            <a href="https://t.me/+79154244172">Telegram</a>
+                        </div>
+                    </li>
+                    <li class="contacts-list-item">
+                        <p>Часы работы</p>
+                        <p>Пн-пт с 9:00 до 19:00</p>
+                    </li>
+                    <li class="contacts-list-item">
+                        <p>Адрес</p>
+                        <p>Москва, 3-я улица Ямского поля, д.18, 2 этаж, IME медицинский центр</p>
+                    </li>
+                </ul>
+                
+                <ul class="contacts__modules" id="contactsRoute">
+                    <li class="contacts__modules-item">
+                        <a href="">
+                            <p>Как добраться на общественном транспорте</p> 
+                            <img src="./images/contacts/arr.png" alt="">
+                        </a>
+                        <div class="contacts__modules-dropdown hidden">
+                            От метро Белорусская (радиальная) ~ 10 минут пешком <br>
+                            –
+                            <br>
+                            Из метро выход №4. Пройти под Тверским путепроводом(под мостом). Спуститься с моста с правой стороны по ходу движения к ЖК «SLAVA». Далее следовать вверх по 1-й улице Ямского поля до первого перекрёстка возле БЦ «Ямское Поле» и повернуть налево на 3-ю улицу Ямского поля и идти вверх по улице до БЦ «Золотой век». Для ориентира, напротив бизнес-центра расположены высокие металлические пальмы золотого цвета.
+                            <br><br>
+                            От метро Белорусская (кольцевая) ~ 12 минут пешком  <br>
+                            –
+                            <br>
+                            Из метро выход №2. Перейти улицу Бутырский вал, подняться на мост Тверского путепровода. 
+                            Спуститься с моста с правой стороны по ходу движения к ЖК «SLAVA». Далее следовать вверх по 1-й улице Ямского поля до первого перекрёстка возле БЦ «Ямское Поле» и повернуть налево на 3-ю улицу Ямского поля и идти вверх по улице до БЦ «Золотой век». Для ориентира, напротив бизнес-центра расположены высокие металлические пальмы золотого цвета.
+                            <br><br>
+                            Медицинский центр расположен на 2 этаже. Справа от ресепшн расположены лифты. Вам необходимо подняться на 2 этаж и, выйдя из лифта, повернуть направо. 
+                            <br>
+                            <br>
+                        </div>
+                    </li>
+                    <li class="contacts__modules-item">
+                        <a href="">
+                            <p>Как добраться на автомобиле</p> 
+                            <img src="./images/contacts/arr.png" alt="">
+                        </a>
+                        <div class="contacts__modules-dropdown hidden">
+                            Из центра 
+                            <br> –
+                            <br>
+                            По 1-й Тверской-Ямской улице подняться на Тверской путепровод, съехать на дублёр Ленинградского проспекта. Далее повернуть на улицу Правды, ехать до пересечения с 5-й улицей Ямского поля, на перекрестке повернуть направо. Ехать до пересечения с 1-й улицей Ямского поля, на перекрёстке повернуть направо.  Далее ехать до пересечения с 3-й улицей Ямского поля, на перекрёстке повернуть направо. Ехать вверх по улице до здания с коричневой фасадной плиткой.
+                            <br><br>
+                            Из области 
+                            <br> –
+                            <br>
+                            По дублёру Ленинградского проспекта доехать до Тверского путепровода и проехать под ним. Далее повернуть на 1-ю улицу Ямского поля и ехать до пересечения с 3-й улицей Ямского поля, повернуть налево. Ехать вверх по улице до здания с коричневой фасадной плиткой.
+                            <br>
+                            <br>
+                            Медицинский центр расположен на 2 этаже. Справа от ресепшн расположены лифты. Вам необходимо подняться на 2 этаж и, выйдя из лифта, повернуть направо. 
+                            <br>
+                            <br>
+                        </div>
+                    </li>
+                    <li class="contacts__modules-item">
+                        <a href="">
+                            <p>Реквизиты</p> 
+                            <img src="./images/contacts/arr.png" alt="">
+                        </a>
+                        <div class="contacts__modules-dropdown hidden">
+                            Общество с Ограниченной Ответственностью
+                            <br>
+                            «Международный Медицинский Эксперт»
+                            <br>
+                            юр. Адрес 125124 г. Москва, 3-я ул. Ямского Поля, д. 18, офис 208
+                            <br>
+                            факт. Адрес 125124, г. Москва, 3-я ул. Ямского Поля, д. 18, офис 208
+                            <br>
+                            ОГРН 1147746838931
+                            <br>
+                            ИНН/КПП 7733888936/771401001
+                            <br>
+                            р/с 40702810038000002967 в ОАО «Сбербанк России» г. Москва
+                            <br>
+                            к/с 30101810400000000225
+                            <br>
+                            БИК 044525225
+                            <br>
+                            ОКПО 33676913
+                            <br>
+                            ОКАТО 45283559000
+                            <br>
+                            Телефон +7 495 740 43 30
+                            <br>
+                            lab@inmedex.ru
+                            <br>
+                            Генеральный директор Башкина Галина Николаевна
+                            <br>
+                            Тел. моб.+7 905 757 89 17
+                        </div>
+                    </li>
+                </ul>
+
+                <iframe class="contacts__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a93f43e254844da31f6d5bd9376e8ff7295f91ef0cfff1ccbf1b2541035ae09&amp;source=constructor" frameborder="0"></iframe>
+
+            </section> 
+           
+
+            <section class="documents" id="documents">
+                <h2 class="documents__title">Документы</h2>
+                <ul class="documents-list">
+                    <a href="./images/documents/Медицинская лицензия ООО ММЭ.pdf">
+                        <li class="documents-list-item">
+                            Медицинская лицензия № Л041-01137-77/00154203 от 05.05.2022 выдана Департаментом здравоохранения г. Москвы 
+                        </li>
+                    </a>
+                    <a href="./images/documents/Лицензия на образовательную деятельность.pdf">
+                        <li class="documents-list-item">Лицензия на осуществление образовательной деятельности № Л035-01298-77/00593486 от 05.08.2022
+                        </li>
+                    </a>
+                    <a href="./images/documents/Услуги и цены.pdf">
+                        <li class="documents-list-item">
+                        Услуги и цены
+                        </li>
+                    </a>
+                    <a href="./images/documents/policy.pdf">
+                        <li class="documents-list-item">
+                        Политика конфиденциальности и обработки данных
+                        </li>
+                    </a>
+                    <a href="./images/documents/Контролирующие органы.pdf">
+                        <li class="documents-list-item">
+                        Контролирующие органы
+                        </li>
+                    </a>
+                    <a href="./images/documents/Положение о подарочных сертификатах.pdf">
+                        <li class="documents-list-item">
+                        Положение о подарочных сертификатах
+                        </li>
+                    </a>
+                    <a href="./images/documents/Правила поведения пациентов.pdf">
+                        <li class="documents-list-item">
+                            Правила поведения пациентов
+                        </li>
+                    </a>
+                    <a href="./images/documents/Правила предоставления медицинских услуг.pdf">
+                        <li class="documents-list-item">
+                            Правила предоставления медицинских услуг
+                        </li>
+                    </a>
+                </ul>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <p class="footer__disclaimer">
+                    Имеются противопоказания. Необходима консультация врача. 
+                </p>
+                <hr class="footer__line">
+                <div class="footer__contacts">
+                    <a href="tel:89168003562">
+                        <p class="footer__contacts-text">
+                            +7 915 424 41 72
+                        </p>
+                    </a>
+
+                    <a class="" href="https://wa.me/79154244172">
+                        <img src="./images/footer/footer__wa.png" alt=""></a>
+                    <a class="" href="https://wa.me/79154244172">
+                        <img src="./images/footer/footer__tg.png" alt=""></a>
+                </div>
+                <hr class="footer__line">
+                <p class="footer__address">
+                    Москва, 3-я улица Ямского поля, <br> д.18, 2 этаж, IME медицинский центр
+                </p>
+                <div class="footer__bottom">
+                    <p class="footer__bottom-copyright">
+                        Все права защищены 2022 <br>
+                        ООО “Международный медицинский эксперт”
+                    </p>
+                    <form class="footer__bottom-form" action="">
+                        <input type="Подписаться" placeholder="Ваш email"> 
+                        <button>Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./scripts/components/swipers/swipers.js"></script>
+
+    <script src="./scripts/components/before-after/before-after.js"></script>
+
+    <script src="./scripts/components/cards/cards.js"></script>
+    <script src="./scripts/components/conctact-modules/conctact-modules.js"></script>
+</body>
+
+</html>
