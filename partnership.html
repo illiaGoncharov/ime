@@ -20,11 +20,9 @@
 </head>
 
 <body class="body">
-
-    <!-- перенести в общие файлы -->
     <script>
-        function popToggle(e) {
-            document.querySelector('.popup_type_order').classList.toggle('popup_opened');
+        function popPartnerToggle(e) {
+            document.querySelector('.popup_type_partner').classList.toggle('popup_opened');
             document.addEventListener('click', (e) => {
                 if (e.target.matches('.popup_opened')) {
                     document.querySelector('.popup_type_order').classList.toggle('popup_opened');
@@ -37,47 +35,50 @@
         }
     </script>
 
-    <div class="popup popup_type_order">
+    <div class="popup popup_type_order popup_type_partner">
         <div class="popup__container">
             <div class="popup__header">
-                <h4 class="popup__title">Записаться на прием</h4>
-                <buttom class="popup__close-button" type="reset" type="buttom" onclick="popToggle()"></buttom>
+                <h4 class="popup__title">Узнать про обучение</h4>
+                <buttom class="popup__close-button" type="reset" type="buttom" onclick="popPartnerToggle()">
+                </buttom>
             </div>
 
-            <form class="form form_type_order" name="order-form" action="./scripts/php/send.php"
-                method="post">
+            <form class="form form_type_order" name="partner-form" action="./scripts/php/sendPartner.php" method="post">
                 <fieldset class="form__input-container">
                     <section class="form__input-section">
-                        <label  class="form__label" for="phone">Ваш телефон</label>
-                        <input class="form__input form__input_type_phone" type="tel" id="phone" name="phone" placeholder="" minlength="2" maxlength="30" required>
+                        <label class="form__label" for="name">ФИО</label>
+                        <input class="form__input form__input_type_name" type="text" id="name" name="name"
+                            placeholder="" minlength="2" maxlength="30" required>
                         <span class="form__input-error" id="title-error"></span>
                     </section>
                     <section class="form__input-section">
-                        <label  class="form__label" for="name">Как к вам обращаться</label>
-                        <input class="form__input form__input_type_name" type="text" id="name" name="name" placeholder="" minlength="2" maxlength="30" required>
+                        <label class="form__label" for="name">Интересующее обучение</label>
+                        <input class="form__input form__input_type_comment" type="text" id="comment" name="comment"
+                            placeholder="" minlength="2" maxlength="30" required>
                         <span class="form__input-error" id="title-error"></span>
                     </section>
                     <section class="form__input-section">
-                        <label  class="form__label" for="name">Интересующая процедура</label>
-                        <input class="form__input form__input_type_comment" type="text" id="comment" name="comment" placeholder="" minlength="2" maxlength="30" required>
+                        <label class="form__label" for="name">Ваш e-mail</label>
+                        <input class="form__input form__input_type_comment" type="text" id="email" name="email"
+                            placeholder="" minlength="2" maxlength="30" required>
                         <span class="form__input-error" id="title-error"></span>
                     </section>
                     <section class="form__input-section">
-                        <label  class="form__label" for="name">Укажите ваш e-mail</label>
-                        <input class="form__input form__input_type_comment" type="text" id="email" name="email" placeholder="" minlength="2" maxlength="30" required>
+                        <label class="form__label" for="phone">Ваш телефон</label>
+                        <input class="form__input form__input_type_phone" type="tel" id="phone" name="phone"
+                            placeholder="" minlength="2" maxlength="30" required>
                         <span class="form__input-error" id="title-error"></span>
                     </section>
-                    
-                        <p class="form__disclaimer">Нажимая «Отправить», вы соглашаетесь <br> с 
-                            <a target="_blank" class="form__disclaimer-link" href="./images/documents/policy.pdf">политикой обработки персональных данных </a>
-                        </p>
-                        
-                        <input class="form__submit-button" type="submit" name="submit" value="Отправить">
-                        <!-- <button class="form__submit-button" type="submit">Отправить</button> -->
+                    <p class="form__disclaimer">Нажимая «Отправить», вы соглашаетесь <br> с
+                        <a target="_blank" class="form__disclaimer-link" href="./images/documents/policy.pdf">
+                            политикой обработки персональных данных </a>
+                    </p>
+
+                    <input class="form__submit-button" type="submit" name="submit" value="Отправить">
                 </fieldset>
             </form>
         </div>
-    </div> 
+    </div>
 
     <div class="popup popup_type_lightbox">
         <figure class="popup__img-figure">
@@ -109,7 +110,6 @@
                 <img class="header__logo" src="./images/header/header__logo.svg" alt="Логотип IME">
                 <div class="header__nav__wrapper">
                 <nav class="header__nav">
-                    <!-- <a class="header__nav-item" target="_blank" href="./images/documents/Услуги и цены.pdf">Услуги и цены</a> -->
                     <a class="header__nav-item" href="./partnership.html">Для пациентов</a>
                     <a class="header__nav-item" href="#contactsRoute">Как добраться</a>
                 </nav>
@@ -117,9 +117,9 @@
                     <div class="header__nav-item">
                         Написать в 
                         <a class="" href="https://wa.me/79154244172">
-                            <img src="./images/header/header__wa.png" alt=""></a>
+                            <img src="./images/header/header__wa.png" alt="Иконка WhatsApp"></a>
                         <a class="" href="https://t.me/+79154244172">
-                            <img src="./images/header/header__tg.png" alt=""></a>
+                            <img src="./images/header/header__tg.png" alt="Иконка Telegram"></a>
                     </div>
                     <a class="header__nav-item" href="tel:89154244172">+7 915 424 41 72</a>
                 </nav>
@@ -147,7 +147,6 @@
                         <h1 class="intro__title intro__title_type_partner">
                             Медицинский центр косметологии <br> с научным подходом к каждому пациенту
                         </h1>
-                        <!-- <button onclick="popToggle()" class="intro__button">Записаться</button> -->
                         <div class="swiper-pagination swiper-pagination__controller"></div>
                     </div>
 
@@ -164,13 +163,11 @@
             <section class="about-us" id="about">
                 <h2 class="about-us__title">Медицинский центр IME</h2>
                 <p class="about-us__text">
-                    Медицинский центр IME основан на базе научной деятельности группы компаний INMEDEX. Ежегодно
-                    проводим локальные семинары и выездные научные конгрессы европейского уровня. Мы успешно обучили уже более 10 000 специалистов в сфере косметологии в России и Европе с 2014г.
+                    Медицинский центр IME основан на базе научной деятельности группы компаний INMEDEX, которая ежегодно проводит локальные семинары и выездные научные конгрессы в России и Европе. С 2014г мы успешно обучили уже более 10 000 специалистов в сфере косметологии.
                 </p>
-                <video class="about-us__iframe" controls autoplay loop muted>
-                    <source src="./videos/about-us__video.webm" type="video/webm">
-                    <source src="./videos/about-us__video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
+                <video class="about-us__iframe about-us__iframe_type_partner" controls autoplay loop muted>
+                    <source src="./videos/partnership.mp4" type="video/mp4">
+                    К сожалению ваш браузер не знаком с видео-тэгами, которые мы используем в верстке. Но ничего критически важного вы не упустили! :)  
                 </video>
                 <ul class="about-us__list">
                     <li class="about-us__list-item">
@@ -185,10 +182,9 @@
                 </ul>
             </section>
 
-            <section class="team" id="team">
+            <section class="team team_type_partner" id="team">
                 <div class="team__wrapper">
-                    <h2 class="team__title">Условия сотрудничества</h2>
-                    <p class="team__text">
+                    <!-- <p class="team__text">
                         Приглашаем квалифицированных специалистов в Медицинский центр IME для приема ваших пациентов на условиях:
                         <br>
                         <br>
@@ -203,7 +199,58 @@
                         • В стоимость аренды медицинского кабинета входит всё необходимое для полноценной работы
                         специалиста.
                     </p>
-                     <!-- <img src="./images/team/team.png" alt="" class="team__photo">    -->
+
+                    <div class="swiper" id="swiperPartner">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/partner-gallery/partner_1.jpg" alt="0"></div>
+                        <div class="swiper-slide"><img src="./images/partner-gallery/partner_2.jpg" alt="1"></div>
+                        <div class="swiper-slide"><img src="./images/partner-gallery/partner_3.jpg" alt="2"></div>
+                        <div class="swiper-slide"><img src="./images/partner-gallery/partner_4.jpg" alt="3"></div>
+                        <div class="swiper-slide"><img src="./images/partner-gallery/partner_5.jpg" alt="4"></div>
+                        </div>
+                    </div> -->
+
+                    <h3 class="team__sub-header">
+                        Обучение
+                    </h3>
+                    <p class="team__text">
+                        Медицинский центр IME и компания Международный Медицинский Эксперт приглашает начинающих и
+                        действующих специалистов в сфере косметологии на групповые и индивидуальные обучения. Лекции и
+                        семинары проводят сертифицированные специалисты с многолетним опытом работы в сферах
+                        косметологии и дерматологии. Обучение специалистов проходит в лекционном формате с возможной
+                        последующей отработкой на практике в нашем медицинском кабинете или выездное обучение в вашей
+                        клинике. Мы предлагаем обучение по следующим направлениям косметологии.
+                        <br>
+                        <br>
+                        • Химические пилинги <br>
+                        • Мезотерапия <br>
+                        • Биоревитализация <br>
+                        • Применение полимолочной кислоты в косметологии <br>
+                        • Нитевое армирование мононитями <br>
+                        • Нитевой лифтинг <br>
+                    </p>
+
+                    <div class="swiper" id="swiperPartnership">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./images/partner-gallery/partner_1.jpg" alt="0"></div>
+                            <div class="swiper-slide"><img src="./images/partner-gallery/partner_2.jpg" alt="1"></div>
+                            <div class="swiper-slide"><img src="./images/partner-gallery/partner_3.jpg" alt="1"></div>
+                            <div class="swiper-slide"><img src="./images/partner-gallery/partner_4.jpg" alt="1"></div>
+                            <div class="swiper-slide"><img src="./images/partner-gallery/partner_5.jpg" alt="1"></div>
+                            <div class="swiper-slide"><img src="./images/partner-gallery/partner_6.jpg" alt="1"></div>
+                        </div>
+                        <!-- <div class="swiper-pagination swiper-pagination__controller"></div> -->
+                    </div>
+
+                    <h3 class="team__sub-header">
+                        Информация для врача
+                    </h3>
+                    <p class="team__text">
+                        Предлагаем уникальную возможность индивидуальной постановки руки и отработку практических
+                        навыков использования наших препаратов(биоревитализанты, пилинги, мезококтейли, PDO-нити).
+                    </p>
+                    <a class="cards__button cards__button_type_partner" onclick="popPartnerToggle()">Узнать подробнее</a>
+
                     <h3 class="team__sub-header">
                         Требование к специалистам
                     </h3>
@@ -219,45 +266,9 @@
                         <br>
                         • Наличие медицинской книжки.
                     </p>
-                    <!-- СДЕЛАТЬ попапы новые + стили починить -->
-                    <!-- <a class="cards__button" onclick="popToggle()">Узнать условия</a>
-                    <a class="cards__button" onclick="popToggle()">Забронировать</a> -->
-                    <h3 class="team__sub-header">
-                        Обучение
-                    </h3>
-                    <p class="team__text">
-                        Медицинский центр IME и компания Международный Медицинский Эксперт приглашает начинающих и
-                        действующих специалистов в сфере косметологии на групповые и индивидуальные обучения. Обучение проводят сертифицированные специалисты с многолетним опытом работы в сферах косметологии и дерматологии. Обучение специалистов проходит в лекционном формате с возможной последующей отработкой практических навыков в нашем медицинском кабинете или выездное обучение в вашей клинике. Мы предлагаем обучение по следующим направлениям косметологии.
-                        <br>
-                        <br>
-                        • Химические пилинги <br>
-                        • Мезотерапия <br>
-                        • Биоревитализация <br>
-                        • Применение полимолочной кислоты в косметологии <br>
-                        • Нитевое армирование мононитями <br>
-                        • Нитевой лифтинг <br>
-                    </p>
-                    <!-- СДЕЛАТЬ попапы новые + стили починить -->
-                    <!-- <a class="cards__button" onclick="popToggle()">Cвязаться с менеджером</a> -->
-                    <h3 class="team__sub-header">
-                        Информация для врача
-                    </h3>
-                    <ul class="documents-list">
-                        <a href="./images/documents/Медицинская лицензия ООО ММЭ.pdf">
-                            <li class="documents-list-item">
-                                Информированное согласие на процедуру
-                            </li>
-                        </a>
-                        <a href="./images/documents/Лицензия на образовательную деятельность.pdf">
-                            <li class="documents-list-item">
-                                Договор об ответственности на оказание процедуры
-                            </li>
-                        </a>
-                    </ul>
                 </div>
-
             </section>
-            
+
             <section class="contacts" id="contacts">
                 <h2 class="contacts__title">Контакты</h2>
                 <ul class="contacts-list">

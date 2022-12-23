@@ -5,6 +5,16 @@
   width: 100%;
 }
 
+.team_type_partner .swiper {
+  height: 700px;
+  border-radius: 10px;
+  object-fit: contain;
+  
+  width: 100%;
+  max-width: clac(100vw - 30px);
+  margin: 0 auto 35px;
+}
+
 .team__wrapper {
   max-width: 1240px;
   margin: 0 auto;
@@ -107,6 +117,12 @@
   .team {
     padding-top: 40px;
   }
+
+  .team_type_partner .swiper {
+    max-width: calc(100vw - 30px);
+    margin: 0 auto 35px auto;
+  }
+
   .team__title {
     font-weight: 400;
     font-size: 40px;
