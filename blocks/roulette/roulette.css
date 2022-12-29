@@ -1,0 +1,53 @@
+.roulette {
+    border: none;
+    padding: 0;
+}
+
+.roulette .popup__container {
+    width: 800px;
+    left: calc((100vw - 800px) / 2);
+}
+ 
+.roulette .popup__title {
+    color: #FFFFFF;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 28px;
+}
+
+.roulette__result {
+    margin-bottom: 35px;
+}
+
+.roulette__footer {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.roulette__footer.visible {
+    display: initial;
+    opacity: 1;
+    visibility: visible;
+}
+
+.form_type_roulette {
+    background: #FFFFFF;
+    border-radius: 10px;
+    min-height: 450px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .roulette .popup__container {
+        padding-top: 25px;
+        left: 15px;
+    }
+    .form_type_roulette {
+        flex-direction: column;
+        padding-bottom: initial;
+    } 
+}

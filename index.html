@@ -34,6 +34,17 @@
         function mobileMenuToggle(e) {
             document.querySelector('.mobile-header').classList.toggle('opened');
         }
+
+        window.setTimeout( function(){
+            document.querySelector('.popup_type_roulette').classList.toggle('popup_opened');
+        }, 3000); //<-- Delay in milliseconds
+
+        // Открыть рулетку (15 сек), 
+
+        // после сабмита закрыть, 
+        // показать, что все кул и 
+        // запомить, что больше не показываем 
+        // ивент лист чтобы закрывался
     </script>
 
     <div class="popup popup_type_order">
@@ -91,18 +102,60 @@
         </figure>
     </div>
 
-    <div class="popup popup_type_submit">
-        <h2 class="popup_type_submit">Все супер!</h2>
+    <div class="popup popup_type_roulette roulette">
+        <div class="popup__container">
+             <div class="popup__header">
+                <h2 class="popup__title">Получи подарок!</h2>
+                <buttom class="popup__close-button" type="reset" type="buttom"
+                    onclick="document.querySelector('.popup_opened').classList.toggle('popup_opened');">
+                </buttom>
+             </div>
+            <form class="form form_type_roulette form__input-container" action="./scripts/php/roulette.php">
+                <fieldset class="form__input-container">
+                    <section class="form__input-section">
+                        <label class="form__label" for="name">Как к вам обращаться</label>
+                        <input class="form__input form__input_type_name" type="text" id="name" name="name"
+                            placeholder="" minlength="2" maxlength="30" required>
+                        <span class="form__input-error" id="title-error"></span>
+                    </section>
+                    <section class="form__input-section">
+                        <label class="form__label" for="name">Укажите ваш e-mail</label>
+                        <input class="form__input form__input_type_comment" type="text" id="email" name="email"
+                            placeholder="" minlength="2" maxlength="30" required>
+                        <span class="form__input-error" id="title-error"></span>
+                    </section>
+
+                    <p class="roulette__result"></p>
+
+                    <input type="button" value="Крутануть" class='roulette__spin form__submit-button'>
+
+                    <section class="roulette__footer">
+                        <p class="form__disclaimer">
+                            Нажимая «Отправить», вы соглашаетесь <br> с
+                            <a target="_blank" class="form__disclaimer-link" href="./images/documents/policy.pdf">
+                                политикой обработки персональных данных
+                            </a>
+                        </p>
+                        <input class="form__submit-button" value="Отправить" type="submit" name="submit">
+                        <!-- onclick="window.location.reload()"
+                         -->
+                    </section>
+
+                </fieldset>
+                <canvas class="roulette__canvas" id="canvas" width="470px" height="470px"></canvas>
+            </form>
+        </div>
     </div>
 
-
     <div class="page">
+
         <div class="mobile-header">
             <a class="header__nav-item" target="_blank" href="./images/documents/Услуги и цены.pdf">Услуги и
                 цены</a>
             <a class="header__nav-item" href="#">Для врачей</a>
             <a class="header__nav-item" href="#contactsRoute">Как добраться</a>
         </div>
+
         <header class="header">
             <div class="header__wrapper">
                 <img class="header__logo" src="./images/header/header__logo.svg" alt="Логотип IME">
@@ -300,10 +353,10 @@
                             </a>
 
                             <div class="small-cards__hidden-container" aria-hidden="true">
-                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_1.jpg" alt="Контурная пластика 1/22">
+                                <!-- <img class="plasticBA" src="./images/cards/small_contur/small_contur_1.jpg" alt="Контурная пластика 1/22">
                                 <img class="plasticBA" src="./images/cards/small_contur/small_contur_2.jpg" alt="Контурная пластика 2/22">
                                 <img class="plasticBA" src="./images/cards/small_contur/small_contur_3.jpg" alt="Контурная пластика 3/22">
-                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_4.jpg" alt="Контурная пластика 4/22">
+                                <img class="plasticBA" src="./images/cards/small_contur/small_contur_4.jpg" alt="Контурная пластика 4/22"> -->
                                 <img class="plasticBA" src="./images/cards/small_contur/small_contur_5.jpg" alt="Контурная пластика 5/22">
                                 <img class="plasticBA" src="./images/cards/small_contur/small_contur_6.jpg" alt="Контурная пластика 6/22">
                                 <img class="plasticBA" src="./images/cards/small_contur/small_contur_7.jpg" alt="Контурная пластика 7/22">
@@ -389,7 +442,7 @@
                         <br>
                         Наши специалисты являются действующими тренерами российских и международный медицинских компаний и успешно обучают других специалистов. Разработка новых методик и процедур является ключевым направлением научной деятельности наших специалистов.
                     </p>
-                    <img src="./images/team/team.png" alt="" class="team__photo">
+                    <!-- <img src="./images/team/team.png" alt="" class="team__photo"> -->
                 </div>
                 <div class="team__doctors">
                     <h3 class="team__sub-header">
@@ -449,7 +502,7 @@
                         <a href="tel:89154244172">+7 915 424 41 72</a>
                     </li>
                     <li class="contacts-list-item">
-                        <p>Телефон по вопросам <br> сотрудничества, найма</p>
+                        <p>Телефон по вопросам <br> сотрудничества</p>
                         <a href="tel:89154244172">+7 915 424 41 72</a>
                     </li>
                     <li class="contacts-list-item">
@@ -633,14 +686,15 @@
                         ООО “Международный медицинский эксперт”
                     </p>
                     <form class="footer__bottom-form" action="">
-                        <input type="Подписаться" placeholder="Ваш email"> 
-                        <button>Отправить</button>
+                        <input type="Подписаться" placeholder="Введите ваш email"> 
+                        <button>Подписаться</button>
                     </form>
                 </div>
             </div>
         </footer>
 
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./scripts/components/swipers/swipers.js"></script>
 
@@ -648,6 +702,8 @@
 
     <script src="./scripts/components/cards/cards.js"></script>
     <script src="./scripts/components/conctact-modules/conctact-modules.js"></script>
+
+    <script src="./scripts/components/roulette/roulette.js"></script>
 </body>
 
 </html>
